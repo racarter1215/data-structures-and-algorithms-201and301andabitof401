@@ -87,9 +87,19 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  // Solution code here...
-};
-
+  let answer = "";
+  arr.forEach(index => {
+    if (character === index.name) {
+      if (Object.values(index)[2] === []) {
+        answer = false
+      } else {
+        answer = true
+      } 
+    }; 
+  }); return answer;
+  
+}
+    
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
@@ -99,8 +109,19 @@ The input and output of this function are the same as the input and output from 
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenEntries = (arr, character) => {
-  // Solution code here...
+  let answer = "";
+  arr.forEach(index => {
+    if (character === index.name) {
+      if (Object.values(index)[2] === []) {
+        answer = false
+      } else {
+        answer = true
+      } 
+    }; 
+  }); return answer;
+  
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5

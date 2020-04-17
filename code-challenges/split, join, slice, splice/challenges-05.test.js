@@ -84,7 +84,7 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   let result = [];
   recipe.ingredients.forEach(ingredient => {
-    result.push(ingredient.slice(ingredient.indexOf(' ', ingredient.indexOf(' ') + 1)+ 1))
+    result.push(ingredient.slice(ingredient.indexOf(' ', ingredient.indexOf(' ') + 1) + 1))
   });
   return result;
 };
@@ -100,7 +100,7 @@ You may also use other string or array methods.
 const splitFoods = (recipe) => {
   let result = [];
   recipe.ingredients.forEach(ingredient => {
-    ingredient.split('')
+    result.push(ingredient.slice(ingredient.indexOf(ingredient.split(' ')[2])))
   })
   return result;
 };
@@ -117,7 +117,9 @@ Return a new array containing just the verbs. For example, ['Mix until evenly di
 
 const stepActions = (recipe) => {
   let result = [];
-  // Solution code here...
+  recipe.steps.forEach(steps => {
+    result.push(steps.split(' ')[0]);
+  })
   return result;
 };
 
@@ -135,7 +137,12 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const removeEvenValues = (arr) => {
-  // Solution code here...
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i]%2 === 0) {
+      arr.splice(i, 1);
+      i--;
+    }
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -154,8 +161,16 @@ removeLastCharacters('Gregor', 9) returns ''
 ------------------------------------------------------------------------------------------------ */
 
 const removeLastCharacters = (str, numberOfCharacters) => {
-  // Solution code here...
-};
+    if (numberOfCharacters >= str.length) {
+      return '';
+    } else if (numberOfCharacters < 0) {
+      return str;
+    } else {
+      return str.slice(0, str.length - numberOfCharacters);
+    }
+  };
+
+
 
 
 /* ------------------------------------------------------------------------------------------------
