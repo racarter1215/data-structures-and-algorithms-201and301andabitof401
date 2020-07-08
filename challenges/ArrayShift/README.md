@@ -8,4 +8,4 @@
 
 # ![Code Challenge 1](./assets/array-shift.png)
 
-### Notes: Na'ama and I did reference Amanda's example to help us understand how to solve the problem. We did our best not to copy her work and utilize as much of our original plan as possible, which I believe we successfully did.
+### Notes: Na'ama and I did reference Amanda's example later in our code challenge to help us understand how to solve the problem. We did our best not to copy her work and utilize as much of our original plan as possible, which I believe we successfully did.
