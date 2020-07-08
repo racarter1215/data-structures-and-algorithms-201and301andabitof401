@@ -1,12 +1,5 @@
-# Challenge Summary
-<!-- Short summary or background information -->
-### Collaborated with Na'ama Bar-Ilan
+# Table of Contents
 
-## Challenge Description
-<!-- Description of the challenge -->
+## Open the "challenges" folder to see all 401 code challenges
 
-## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
-
-## Solution
-<!-- Embedded whiteboard image -->
+### Challenge 1: Array-Shift
