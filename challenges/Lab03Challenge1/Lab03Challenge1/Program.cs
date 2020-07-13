@@ -4,10 +4,15 @@ using System.Reflection.Metadata.Ecma335;
 namespace Lab03Challenge1
 {
     public class Program
-    {
+    {/// <summary>
+    /// This method calls all subsequent methods as well as contain the console.writeline and console.readline
+    /// so that unit tests can be run. Specifically, code for challenge 2 is held here so that the code to 
+    /// create an average of values is in its own method
+    /// </summary>
+    /// <param name="args"></param>
         static void Main(string[] args)
         {
-            int firstMethod = MultiplyInputNumber("4 19 50");
+            int firstMethod = MultiplicationMethod("4 19 50");
             Console.WriteLine($"Here's the product for the numbers: {firstMethod}");
             Console.WriteLine("Enter a number between 2 and 10");
             string userAnswer = Console.ReadLine();
@@ -48,8 +53,12 @@ namespace Lab03Challenge1
             
 
         }
-        
-        public static int MultiplyInputNumber(string input)
+        /// <summary>
+        /// The following code handles challenge 1, where 
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static int MultiplicationMethod(string input)
         {
             string[] stringArray = input.Split(' ');
 
@@ -64,8 +73,8 @@ namespace Lab03Challenge1
             for (int i = 0; i < 3; i++)
             {
                 //convert the string to an int
-                bool convertedNumber = int.TryParse(stringArray[i], out int returnValue);
-                if(convertedNumber)
+                bool numberConversion = int.TryParse(stringArray[i], out int returnValue);
+                if(numberConversion)
                 {
                     //if it's true
                     product *= returnValue;

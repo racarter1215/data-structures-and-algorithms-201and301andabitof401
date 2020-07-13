@@ -7,38 +7,38 @@ namespace Lab03Test1
     public class UnitTest1
     {
         [Fact]
-        public void CanReturnZeroWhenLessThanThree()
+        public void ReturnZeroTest()
         {
             //Arrange
             string input = "string";
             //Act
-            int outputFromMethod = MultiplyInputNumber(input);
+            int outputFromMethod = MultiplicationMethod(input);
 
             //Assert
             Assert.Equal(0, outputFromMethod);
         }
         [Fact]
-        public void CanReturnProductWithThreeNumbers()
+        public void ThreeValuesProductTest()
         {
             //Arrange
             string numbers = "2 3 4";
             //Act
-            int output = MultiplyInputNumber(numbers);
+            int output = MultiplicationMethod(numbers);
             //Assert
             Assert.Equal(24, output);
         }
         [Theory]
-        [InlineData("4 8 15 16", 480)]
+        [InlineData("2 4 5 6", 240)]
         [InlineData("1 1 1", 1)]
-        [InlineData("cat dog 5", 5)]
-        [InlineData("candycane chocolate", 0)]
-        [InlineData("-5 -5 1", 25)]
-        public void CanReturnProperProduct(string numbers, int product)
+        [InlineData("dark tower 5", 5)]
+        [InlineData("raven guard", 0)]
+        [InlineData("-10 -10 1", 100)]
+        public void ProductTest(string numbers, int product)
         {
             //Arrange
-            //not necessary here, randomly
+            
             //Act
-            int result = MultiplyInputNumber(numbers);
+            int result = MultiplicationMethod(numbers);
 
             //Assert
             Assert.Equal(product, result);
