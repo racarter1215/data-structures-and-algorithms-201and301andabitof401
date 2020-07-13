@@ -95,16 +95,10 @@ namespace LLLibrary
             {
                 while (Current.Next != null)
                 {
-                    if (Current.Next == null)
-                    {
-                        Current.Next = node;
-                        break;
-                    }
-                    else
-                    {
-                        Current = Current.Next;
-                    }
+                    Current = Current.Next;
                 }
+                Current.Next = node;
+                Current = Current.Next;
             }
         }
     }

@@ -53,7 +53,7 @@ namespace LinkedListTests
 
             // Act 
             int searchForValue = 15;
-          bool exists = list.Includes(searchForValue);
+            bool exists = list.Includes(searchForValue);
 
             // Assert
             Assert.True(exists);
