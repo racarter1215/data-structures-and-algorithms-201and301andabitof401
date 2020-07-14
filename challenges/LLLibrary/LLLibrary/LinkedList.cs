@@ -77,5 +77,29 @@ namespace LLLibrary
 
             return sb.ToString();
         }
+
+        /// <summary>
+        /// This method adds a new node with the given value to the end of the list.
+        /// </summary>
+        /// <param name="value">The int value to be added to the list</param>
+        /// <returns>The list with the appended value</returns>
+        public void AppendNumber(int value)
+        {
+            Node node = new Node(value);
+            Current = Head;
+            if (Head == null)
+            {
+                Head = node;
+            }
+            else
+            {
+                while (Current.Next != null)
+                {
+                    Current = Current.Next;
+                }
+                Current.Next = node;
+                Current = Current.Next;
+            }
+        }
     }
 }

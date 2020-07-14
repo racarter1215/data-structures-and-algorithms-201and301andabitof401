@@ -53,7 +53,7 @@ namespace LinkedListTests
 
             // Act 
             int searchForValue = 15;
-          bool exists = list.Includes(searchForValue);
+            bool exists = list.Includes(searchForValue);
 
             // Assert
             Assert.True(exists);
@@ -101,6 +101,23 @@ namespace LinkedListTests
             // Assert
             Assert.Equal(expected, value);
 
+        }
+
+        [Fact]
+        public void CanAppendToLinkedList()
+        {
+            //append means add to the end
+            //Arrange
+            LinkedList list = new LinkedList();
+            list.Insert(8);
+            list.Insert(15);
+            list.Insert(16);
+            list.Insert(23);
+            list.Insert(42);
+            // Act
+            list.AppendNumber(4);
+            // Assert
+            Assert.Equal(4, list.Current.Value);
         }
     }
 }
