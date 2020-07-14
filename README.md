@@ -5,3 +5,5 @@
 ### Challenge 1: Array-Shift
 
 ### Challenge 5: Linked-List
+
+### Challenge 6: Linked-List Implementation
