@@ -16,7 +16,7 @@ namespace LLLibrary
         }
 
         /// <summary>
-        /// Inserts a new node with an O(1) operation into linkedList
+        /// Inserts a new node with an O(1) operation into LinkedList
         /// </summary>
         /// <param name="value">value to be strored in the node</param>
         public void Insert(int value)
